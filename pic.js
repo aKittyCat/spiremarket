@@ -245,6 +245,7 @@
     .item-img-wrapper {
       position: relative;
       max-width: 320px;
+      max-height: 400px;
       width: 100%;
       border-radius: 1rem;
       overflow: hidden;
@@ -254,6 +255,9 @@
         0 0 20px rgba(139, 92, 246, 0.08),
         0 4px 24px rgba(0, 0, 0, 0.3);
       animation: itemImgFadeIn 0.4s ease-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .item-img-wrapper:hover {
@@ -267,7 +271,7 @@
 
     .item-img {
       width: 100%;
-      height: auto;
+      max-height: 400px;
       display: block;
       object-fit: contain;
       border-radius: 1rem;
@@ -308,15 +312,21 @@
     @media (max-width: 768px) {
       .item-img-wrapper {
         max-width: 240px;
+        max-height: 280px;
+      }
+      .item-img {
+        max-height: 280px;
       }
     }
 
     @media (max-width: 480px) {
       .item-img-wrapper {
         max-width: 180px;
+        max-height: 220px;
         border-radius: 0.75rem;
       }
       .item-img {
+        max-height: 220px;
         border-radius: 0.75rem;
       }
     }
