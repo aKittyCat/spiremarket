@@ -608,7 +608,9 @@
                     • ตัวละครสามารถซื้อและได้รับผลจากไอเทมประเภทนี้ได้เพียง 1 ครั้งต่ออันเท่านั้น
                   </li>
                   <li>
-                    • ตัวละครต้องลงบันทึกใช้งานไอเทมในช่อง <span class="text-fantasy-emerald font-bold">บันทึกcomsumable</span> และใส่รายละเอียดผลที่เลือกมาหากตัวไอเทมระบุไว้
+                    • ตัวละครต้องลงบันทึกใช้งานไอเทมในช่อง <span
+                      class="text-fantasy-emerald font-bold">บันทึกcomsumable</span>
+                    และใส่รายละเอียดผลที่เลือกมาหากตัวไอเทมระบุไว้
                   </li>
                   <li>
                     • เมื่อใช้งานไอเทม ตัวไอเทมจะหายไปแล้วไม่สามารถเอากลับคืนมาได้อีก
@@ -2915,16 +2917,9 @@
       if (openBtn) openBtn.addEventListener("click", openCartModal);
       if (closeBtn) closeBtn.addEventListener("click", closeCartModal);
 
-      // ปิดเมื่อคลิกพื้นที่ว่างข้างนอก
-      cartModal.addEventListener("click", (e) => {
-        if (e.target === cartModal) closeCartModal();
-      });
-
-      // (Optional) ปุ่มตะกร้าในแถบเครื่องมือ Bulk Actions ก็ให้เปิด Modal ด้วย
-      // หาปุ่มตะกร้าเดิมใน bulkActions ถ้ามี
       const bulkCartBtn = document.querySelector('#bulkActions [data-page="cart"]');
       if (bulkCartBtn) {
-        bulkCartBtn.removeAttribute('data-page'); // ลบ navigation เดิมออก
+        bulkCartBtn.removeAttribute('data-page');
         bulkCartBtn.addEventListener('click', openCartModal);
       }
     });
